@@ -1,0 +1,98 @@
+theme = 'bilberry/v4'
+canonifyurls = true
+DefaultContentLanguage = "en"
+[languages]
+	[languages.en]
+		title = 'Forexperiments'
+		baseURL = 'https://www.forexperiments.com/'
+		[languages.en.params]
+			subtitle = "Various experiments with forex and other stuff"
+			weight = 1
+			languageName = 'English'
+			description = "Various experiments with forex and other stuff"
+			copyrightUrl = "https://www.dandandin.net"
+			creditsUrl = "https://www.dandandin.net"
+			# define your links with FontAwesome 5 (only free icons are supported)
+			# all icons https://fontawesome.com/icons?d=gallery&m=free
+			# brand icons https://fontawesome.com/icons?d=gallery&s=brands&m=free
+			socialMediaLinks = [
+				{ link = "https://mastodon.uno/@dandandin", icon = "fab fa-mastodon", rel = "me" },
+				{ link = "https://www.facebook.com/Forexperiments/", icon = "fab fa-facebook" },
+				{ link = "https://www.youtube.com/user/Forexperiments", icon = "fab fa-youtube" }
+			]
+			keywords = "blog,personal,post,beer money"	
+	[languages.it]
+		title = 'Forexperimenti'
+		baseURL = 'https://www.forexperimenti.it/'
+		[languages.it.params]
+			subtitle = "Esperimenti vari con il forex e altro"
+			weight = 2
+			languageName = 'Italiano'
+			description = "Esperimenti vari con il forex e altro"
+			keywords = "blog,vita privata,post"
+			socialMediaLinks = [
+				{ link = "https://mastodon.uno/@dandandin", icon = "fab fa-mastodon", rel = "me" },
+				{ link = "https://www.facebook.com/Forexperimenti/", icon = "fab fa-facebook" },
+				{ link = "https://www.youtube.com/user/Forexperimenti", icon = "fab fa-youtube" }
+			]
+			copyrightUrl = "https://www.dandandin.it"
+			creditsUrl = "https://www.dandandin.it"
+enableRobotsTXT = true
+
+[params]
+	author = "Magnetic_dud"
+	resizeImages = true
+	customImage = "/images/favicon.png"
+	showHeaderLanguageChooser = true
+	showFooterLanguageChooser = true
+	showReadingTime = true
+	tocMinWordCount = 400
+	showFooter = true
+	amountCategoriesInFooter = 8
+	showSocialMedia = true
+	showArchive = true
+	archiveDateGrouping = "2006-01"
+	enableMomentJs = true
+	copyrightBy = "Magnetic_dud"
+    copyrightUseCurrentYear = true  # set to true to always display the current year in the copyright
+    copyrightYearOverride = "2011"
+    creditsText = "Dandandin"
+	commentoJsURL = ""
+	enableLightDarkTheme = true
+
+	css_modules = ["css/mod.css"]
+	js_modules = ["extra.js"]
+
+	# How many articles should be displayed at once?
+  	paginate = 8
+
+	# Enable / Disable algolia search
+	algolia_search    = true
+	algolia_appId     = ""
+	algolia_apiKey    = ""
+	algolia_indexName = ""
+	# Set this option to false if you want to search within all articles in all languages at once
+	algolia_currentLanguageOnly = true
+
+	[markup]
+		defaultMarkdownHandler = 'goldmark'
+		[markup.goldmark]
+			[markup.goldmark.renderer]
+			# change to 'true' if you need to render raw HTML within your markdown content
+			unsafe = false
+
+		[markup.tableOfContents]
+			endLevel = 5
+			ordered = false
+			startLevel = 2
+
+	# do NOT change anything below
+	[taxonomies]
+		author   = "author"
+		tag      = "tags"
+		category = "categories"
+		series   = "series"
+
+	[outputs]
+		home = [ "HTML", "JSON", "RSS" ]
+		page = [ "HTML" ]
